@@ -25,7 +25,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container page-header">
+    <header class="container page-header" id="header">
       <div class="page-header__logo">
         <svg
           class="header-logo"
@@ -58,6 +58,28 @@
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
+      <nav class="page-header__nav">
+        <ul class="page-header__list list">
+          <li class="page-header__item">
+            <a class="page-header__link" href="#about">ABOUT</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#approach">APPROACH</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#services_">SERVICES</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#testimonials">TESTIMONIALS</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#blog">BLOG</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#style">FASHION STYLE</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- mobile menu -->
@@ -163,13 +185,19 @@
               </li>
             </ul>
           </div>
+        </div>
+        <picture>
+          <source
+            srcset="./images/sec2_mobile.png"
+            media="(max-width: 1439px)"
+          />
+          <source srcset="./images/sec2.png" media="(min-width: 1440px)" />
           <img
             class="page-about__img"
             src="./images/sec2_mobile.png"
             alt="woman bw"
-            width="320"
           />
-        </div>
+        </picture>
       </section>
 
       <!-- 3rd section STYLE-->
@@ -190,6 +218,17 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
+        <div class="page-style__content">
+          <div class="page-style__main-slide">
+            <h3 class="page-style__title">You are always enough.</h3>
+            <p class="page-style__text">
+              Every part of a woman, her every role is equally important and
+              worthy to be seen. Not clothes but you are the starting point of a
+              style to remember. Let’s manifest that.
+            </p>
+          </div>
+          <div class="page-style__additional-image"></div>
+        </div>
       </section>
 
       <!-- 4th section APPROACH-->
@@ -198,49 +237,88 @@
         <div class="swiper mySwiper-app">
           <div class="swiper-wrapper">
             <div class="swiper-slide page-approach__slides">
-              <img
+              <!-- <img
                 class="page-approach__image"
                 src="./images/approach2-mob.png"
                 alt="flower"
                 width="160"
-              />
-              <h3 class="swipe__title">Your comfort is a priority.</h3>
-              <p class="page-approach__text">
-                I mind the relevance of a look to your social and personal
-                lifestyle. We don’t pretend to be comfortable, we live for it.
-              </p>
+              /> -->
+              <picture>
+                <source
+                  srcset="./images/approach1-mob.png"
+                  media="(max-width: 1439px)"
+                />
+                <source
+                  srcset="./images/approach1-desktop.png"
+                  media="(min-width: 1440px)"
+                />
+                <img
+                  class="page-approach__img"
+                  src="./images/approach1-mob.png"
+                  alt="woman"
+                />
+              </picture>
+              <div class="page-approach__text-wrap">
+                <h3 class="swipe__title">Your comfort is a priority.</h3>
+                <p class="page-approach__text">
+                  I mind the relevance of a look to your social and personal
+                  lifestyle. We don’t pretend to be comfortable, we live for it.
+                </p>
+              </div>
             </div>
             <div class="swiper-slide page-approach__slides">
-              <img
-                class="page-approach__image"
-                src="./images/approach1-mob.png"
-                alt="flower"
-                width="160"
-              />
-              <h3 class="swipe__title">
-                I invest TIme to know the woman in front of me.
-              </h3>
-              <p class="page-approach__text">
-                I am excited to hear about your story and life experiences that
-                made you who you are. Your personality is the foundaHon of a
-                unique style & I’m here to explore it.
-              </p>
+              <picture>
+                <source
+                  srcset="./images/approach2-mob.png"
+                  media="(max-width: 1439px)"
+                />
+                <source
+                  srcset="./images/approach2-desktop.png"
+                  media="(min-width: 1440px)"
+                />
+                <img
+                  class="page-approach__img"
+                  src="./images/approach2-mob.png"
+                  alt="woman"
+                />
+              </picture>
+              <div class="page-approach__text-wrap">
+                <h3 class="swipe__title">
+                  I invest TIme to know the woman in front of me.
+                </h3>
+                <p class="page-approach__text">
+                  I am excited to hear about your story and life experiences
+                  that made you who you are. Your personality is the foundaHon
+                  of a unique style & I’m here to explore it.
+                </p>
+              </div>
             </div>
             <div class="swiper-slide page-approach__slides">
-              <img
-                class="page-approach__image"
-                src="./images/approach3-mob.png"
-                alt="flower"
-                width="160"
-              />
-              <h3 class="swipe__title">
-                Strive for a sustainable & mindful wardrobe.
-              </h3>
-              <p class="page-approach__text">
-                We shop strategically and edit a wardrobe with care – keep
-                what’s dear, yet restyle it to feel modern & serve your current
-                sense of self.
-              </p>
+              <picture>
+                <source
+                  srcset="./images/approach3-mob.png"
+                  media="(max-width: 1439px)"
+                />
+                <source
+                  srcset="./images/approach3-desktop.png"
+                  media="(min-width: 1440px)"
+                />
+                <img
+                  class="page-approach__img"
+                  src="./images/approach3-mob.png"
+                  alt="woman"
+                />
+              </picture>
+              <div class="page-approach__text-wrap">
+                <h3 class="swipe__title">
+                  Strive for a sustainable & mindful wardrobe.
+                </h3>
+                <p class="page-approach__text">
+                  We shop strategically and edit a wardrobe with care – keep
+                  what’s dear, yet restyle it to feel modern & serve your
+                  current sense of self.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -323,6 +401,47 @@
           </div>
           <div class="custom-pagination-container">
             <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="mySwiper3__desktop">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide page-services__slide">
+              <img
+                class="page-services__pic"
+                width="197"
+                src="./images/serv3.png"
+                alt="woman"
+              />
+              <p class="page-services__card-descriprion">Wardrobe Edit</p>
+            </div>
+            <div class="swiper-slide page-services__slide">
+              <img
+                class="page-services__pic"
+                width="197"
+                src="./images/serv1.png"
+                alt="woman"
+              />
+              <p class="page-services__card-descriprion">Guided Shopping</p>
+            </div>
+            <div class="swiper-slide page-services__slide">
+              <img
+                class="page-services__pic"
+                width="197"
+                src="./images/serv2.png"
+                alt="shopping bag"
+              />
+              <p class="page-services__card-descriprion">Style Session</p>
+            </div>
+            <div class="swiper-slide page-services__slide">
+              <img
+                class="page-services__pic"
+                width="197"
+                src="./images/serv4.png"
+                alt="woman is typing"
+              />
+              <p class="page-services__card-descriprion">Special Styling</p>
+            </div>
           </div>
         </div>
       </section>
@@ -424,6 +543,95 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
+        <div class="mySwiper4__desktop">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="page-testimonials__item-header">
+                <img
+                  class="page-testimonials__pic"
+                  src="./images/expert1-mob.png"
+                  alt="userpic"
+                  width="56"
+                />
+                <div class="page-testimonials__header-wrap">
+                  <p class="page-testimonials__item-name">Nadiya Maltseva</p>
+                  <p class="page-testimonials__item-position">
+                    Maltseva Consulting
+                  </p>
+                </div>
+              </div>
+              <p class="page-testimonials__item-text">
+                During a stage in my life, I needed to transition from my
+                corporate attire during work hours and floral dresses during
+                leisure time...
+              </p>
+              <p class="page-testimonials__readmore">Read more</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="page-testimonials__item-header">
+                <img
+                  class="page-testimonials__pic"
+                  src="./images/expert3.png"
+                  alt="userpic"
+                  width="56"
+                />
+                <div class="page-testimonials__header-wrap">
+                  <p class="page-testimonials__item-name">Лемара Ахбаева</p>
+                  <p class="page-testimonials__item-position">
+                    Make Up Artist & Beauty Expert
+                  </p>
+                </div>
+              </div>
+              <p class="page-testimonials__item-text">
+                Эдна, я выбрала работу с тобой, потому что ты внимательна к
+                деталям, очень хорошо чувствуешь...
+              </p>
+              <p class="page-testimonials__readmore">Read more</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="page-testimonials__item-header">
+                <img
+                  class="page-testimonials__pic"
+                  src="./images/expert4.png"
+                  alt="userpic"
+                  width="56"
+                />
+                <div class="page-testimonials__header-wrap">
+                  <p class="page-testimonials__item-name">Дарья Трофимова</p>
+                  <p class="page-testimonials__item-position">Психотерапевт</p>
+                </div>
+              </div>
+              <p class="page-testimonials__item-text">
+                Хочу відзначити в тобі здатність показати та пояснити, що одяг —
+                не просто функціональна тканина...
+              </p>
+              <p class="page-testimonials__readmore">Read more</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="page-testimonials__item-header">
+                <img
+                  class="page-testimonials__pic"
+                  src="./images/expert2.png"
+                  alt="userpic"
+                  width="56"
+                />
+                <div class="page-testimonials__header-wrap">
+                  <p class="page-testimonials__item-name">Nadiya Maltseva</p>
+                  <p class="page-testimonials__item-position">
+                    Maltseva Consulting
+                  </p>
+                </div>
+              </div>
+              <p class="page-testimonials__item-text">
+                During a stage in my life, I needed to transition from my
+                corporate attire during work hours and floral dresses during
+                leisure time, to a more versatile and easy-to-wear style.
+              </p>
+
+              <p class="page-testimonials__readmore">Read more</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- 7th section FORM-->
@@ -481,7 +689,7 @@
                 <option value="service2">Service 2</option>
               </select>
             </div>
-            <div class="form-group">
+            <div class="form-group form-comment">
               <label for="comment">Comment </label>
               <input type="text" id="comment" name="comment" />
             </div>
@@ -491,88 +699,99 @@
             email edna@shindinde.com
           </p>
           <div class="page-form__fotter">
-            <p class="page-form__footer-text">Follow me via</p>
-            <a href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_1325_3153)">
-                  <path
-                    d="M11.3335 1.33301H4.66683C2.82588 1.33301 1.3335 2.82539 1.3335 4.66634V11.333C1.3335 13.174 2.82588 14.6663 4.66683 14.6663H11.3335C13.1744 14.6663 14.6668 13.174 14.6668 11.333V4.66634C14.6668 2.82539 13.1744 1.33301 11.3335 1.33301Z"
-                    stroke="#210803"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.6668 7.5802C10.7491 8.13503 10.6543 8.70168 10.396 9.19954C10.1376 9.69741 9.72889 10.1011 9.22788 10.3533C8.72687 10.6055 8.1591 10.6933 7.60532 10.6042C7.05155 10.515 6.53997 10.2536 6.14336 9.85698C5.74674 9.46036 5.48528 8.94878 5.39618 8.39501C5.30707 7.84124 5.39484 7.27346 5.64701 6.77245C5.89919 6.27144 6.30292 5.86269 6.80079 5.60436C7.29865 5.34603 7.8653 5.25126 8.42013 5.33353C8.98608 5.41746 9.51003 5.68118 9.91459 6.08574C10.3192 6.4903 10.5829 7.01425 10.6668 7.5802Z"
-                    stroke="#210803"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M11.6665 4.33301H11.6732"
-                    stroke="#210803"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1325_3153">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs></svg
-            ></a>
+            <div class="page-form__footer-wrap">
+              <p class="page-form__footer-text">Follow me via</p>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1325_3153)">
+                    <path
+                      d="M11.3335 1.33301H4.66683C2.82588 1.33301 1.3335 2.82539 1.3335 4.66634V11.333C1.3335 13.174 2.82588 14.6663 4.66683 14.6663H11.3335C13.1744 14.6663 14.6668 13.174 14.6668 11.333V4.66634C14.6668 2.82539 13.1744 1.33301 11.3335 1.33301Z"
+                      stroke="#210803"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10.6668 7.5802C10.7491 8.13503 10.6543 8.70168 10.396 9.19954C10.1376 9.69741 9.72889 10.1011 9.22788 10.3533C8.72687 10.6055 8.1591 10.6933 7.60532 10.6042C7.05155 10.515 6.53997 10.2536 6.14336 9.85698C5.74674 9.46036 5.48528 8.94878 5.39618 8.39501C5.30707 7.84124 5.39484 7.27346 5.64701 6.77245C5.89919 6.27144 6.30292 5.86269 6.80079 5.60436C7.29865 5.34603 7.8653 5.25126 8.42013 5.33353C8.98608 5.41746 9.51003 5.68118 9.91459 6.08574C10.3192 6.4903 10.5829 7.01425 10.6668 7.5802Z"
+                      stroke="#210803"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.6665 4.33301H11.6732"
+                      stroke="#210803"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1325_3153">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs></svg
+              ></a>
+            </div>
+
+            <button
+              type="button"
+              class="button page-form__button button--accent"
+            >
+              send a request
+            </button>
           </div>
-          <button type="button" class="button page-form__button button--accent">
-            send a request
-          </button>
         </div>
       </section>
 
       <!-- 8th section BLOG-->
       <section class="container page-section page-blog" id="blog">
         <h2 class="page-blog__title">BLOG</h2>
-        <ul class="page-blog__gallery list">
-          <li class="page-blog__item">
-            <img src="./images/blog1.png" alt="woman" width="106" />
-          </li>
-          <li class="page-blog__item">
-            <img src="./images/blog2.png" alt="sweater" width="106" />
-          </li>
-          <li class="page-blog__item">
-            <img src="./images/blog3.png" alt="woman" width="106" />
-          </li>
-          <li class="page-blog__item">
-            <img src="./images/blog4.png" alt="woman" width="106" />
-          </li>
-          <li class="page-blog__item">
-            <img src="./images/blog5.png" alt="woman" width="106" />
-          </li>
-          <li class="page-blog__item">
-            <img src="./images/blog6.png" alt="shoes" width="106" />
-          </li>
-        </ul>
-        <div class="page-blog__more">
-          <h2 class="page-blog__more-title">sustainable & mindful wardrobe</h2>
-          <div class="page-blog__text-block">
-            <p class="page-blog__more-text">
-              Join my community & let’s explore meaningful topics of conscious
-              fashion and styling together.
-            </p>
-            <button
-              type="button"
-              class="button button--light page-blog__button"
-            >
-              explore more
-            </button>
+
+        <div class="page-blog__wrap">
+          <ul class="page-blog__gallery list">
+            <li class="page-blog__item">
+              <img src="./images/blog1.png" alt="woman" width="106" />
+            </li>
+            <li class="page-blog__item">
+              <img src="./images/blog2.png" alt="sweater" width="106" />
+            </li>
+            <li class="page-blog__item">
+              <img src="./images/blog3.png" alt="woman" width="106" />
+            </li>
+            <li class="page-blog__item">
+              <img src="./images/blog4.png" alt="woman" width="106" />
+            </li>
+            <li class="page-blog__item">
+              <img src="./images/blog5.png" alt="woman" width="106" />
+            </li>
+            <li class="page-blog__item">
+              <img src="./images/blog6.png" alt="shoes" width="106" />
+            </li>
+          </ul>
+          <div class="page-blog__more">
+            <h2 class="page-blog__more-title">
+              sustainable & mindful wardrobe
+            </h2>
+            <div class="page-blog__text-block">
+              <p class="page-blog__more-text">
+                Join my community & let’s explore meaningful topics of conscious
+                fashion and styling together.
+              </p>
+              <button
+                type="button"
+                class="button button--light page-blog__button"
+              >
+                explore more
+              </button>
+            </div>
           </div>
         </div>
         <div class="page-blog__footer">
-          <a href="#">
+          <a href="#header">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -591,8 +810,9 @@
                 stroke="#B31719"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              /></svg
-          ></a>
+              />
+            </svg>
+          </a>
         </div>
       </section>
     </main>
@@ -654,7 +874,7 @@
       </div>
       <div class="page-footer__social">
         <p class="page-footer__text">fashion styling</p>
-        <a href="#"
+        <a href="https://www.instagram.com/" target="_blank"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

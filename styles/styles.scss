@@ -50,6 +50,7 @@ body {
 .container {
   // outline: 1px dotted lightgreen;
   margin: 0 auto;
+  width: 100%;
   max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
@@ -99,6 +100,9 @@ select {
   &__icon {
     cursor: pointer;
   }
+  &__nav {
+    display: none;
+  }
 }
 
 .header-logo {
@@ -144,10 +148,13 @@ select {
 .page-about {
   padding-left: 0;
   padding-right: 0;
+  display: flex;
+  flex-direction: column;
 
   &__text-wrap {
     display: flex;
     flex-direction: column;
+    order: 2;
   }
 
   &__title,
@@ -159,7 +166,6 @@ select {
   }
 
   &__title {
-    order: 2;
     color: $button-accent;
     letter-spacing: 0.48px;
     text-transform: uppercase;
@@ -171,13 +177,11 @@ select {
   }
 
   &__text {
-    order: 3;
     line-height: 1.5;
     text-align: justify;
   }
 
   &__links {
-    order: 4;
     color: $links-text-color;
   }
 
@@ -235,6 +239,9 @@ select {
     width: 250px;
     margin-bottom: 52px;
   }
+  &__content {
+    display: none;
+  }
 }
 
 // page-approach styles
@@ -244,7 +251,6 @@ select {
   padding-top: 40px;
   padding-bottom: 26px;
   &__title {
-    //   order: 1;
     margin-bottom: 40px;
     color: $button-accent;
     font-size: 12px;
@@ -254,7 +260,9 @@ select {
   &__image {
     margin-bottom: 16px;
   }
-
+  &__additional-image {
+    display: none;
+  }
   &__slides {
     align-items: end;
   }
@@ -297,7 +305,9 @@ select {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-
+  .mySwiper3__desktop {
+    display: none;
+  }
   &__title {
     color: $button-accent;
     font-family: $secondary-font;
@@ -339,6 +349,9 @@ select {
   padding-left: 25px;
   padding-right: 25px;
   flex-direction: column;
+  .mySwiper4__desktop {
+    display: none;
+  }
   &__item-header {
     display: flex;
     align-items: center;
@@ -435,6 +448,7 @@ select {
 .page-form {
   flex-direction: column;
   padding: 32px;
+  padding-bottom: 64px;
   &__pic-wrapper {
     margin-left: -16px;
     margin-right: -16px;
@@ -442,7 +456,6 @@ select {
   }
 
   &__wrap {
-    padding-bottom: 34px;
     padding-top: 24px;
   }
 
@@ -477,6 +490,12 @@ select {
 
   &__fotter {
     display: flex;
+
+    flex-direction: column;
+  }
+  &__footer-wrap {
+    display: flex;
+    align-items: center;
     margin-bottom: 24px;
   }
   &__footer-text {
@@ -669,4 +688,366 @@ select {
 .mobile-menu.active + .page-main {
   opacity: 0;
   pointer-events: none; /* Запрет взаимодействия с невидимым контентом */
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    min-width: 1440px;
+    width: 100%;
+  }
+  .page-header {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 48px;
+    padding-bottom: 40px;
+    &__icon {
+      display: none;
+    }
+    &__nav {
+      display: flex;
+    }
+    &__list {
+      display: flex;
+    }
+    &__item {
+      margin-right: 40px;
+      font-size: 14px;
+    }
+  }
+  .header-logo {
+    width: 122px;
+    height: 32px;
+  }
+
+  .mobile-menu {
+    top: 80px;
+  }
+  // page-hero section styles --desktop
+  .page-hero {
+    flex-direction: row;
+    padding-left: 202px;
+    padding-right: 80px;
+    padding-bottom: 0;
+    &__textwrap {
+      margin: 0;
+    }
+    &__title {
+      font-size: 64px;
+      line-height: 1.03;
+      margin: 0;
+      margin-bottom: 80px;
+    }
+    &__button {
+      margin-left: 0px;
+      align-self: flex-end;
+      width: 200px;
+      font-size: 10px;
+    }
+    &__br {
+      display: none;
+    }
+    &__image {
+      width: 407px;
+      height: 587px;
+      margin-right: 120px;
+    }
+  }
+
+  // page-about section styles --desktop
+  .page-about {
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-bottom: 80px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    &__text-wrap {
+      width: 433px;
+      padding-top: 16px;
+      justify-content: space-between;
+    }
+    &__title,
+    &__text,
+    &__links {
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    &__img {
+      width: 711px;
+      height: 466px;
+      margin-bottom: 0;
+    }
+    &__text {
+      font-size: 12px;
+      padding-right: 0;
+    }
+  }
+
+  // page-style section styles --desktop
+  .page-style {
+    background-image: none;
+    background-color: $bg-color;
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-bottom: 80px;
+    padding-right: 80px;
+    height: auto;
+    .mySwiper {
+      display: none;
+    }
+    &__content {
+      display: flex;
+      // border: 1px solid red;
+      align-items: center;
+      width: 100%;
+    }
+    &__main-slide {
+      width: 456px;
+      height: 686px;
+
+      background: url('./../images/stylebg-desktop.png') no-repeat;
+      padding-top: 222px;
+      padding-bottom: 80px;
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-right: 297px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__title {
+      font-size: 64px;
+      line-height: 1.03;
+      margin-bottom: 144px;
+    }
+
+    &__text {
+      width: auto;
+    }
+    &__additional-image {
+      width: 310px;
+      height: 424px;
+
+      background: url('./../images/style.png') no-repeat;
+    }
+  }
+
+  // page-approach styles --desktop
+  .page-approach {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    position: relative;
+    .swiper-wrapper {
+      margin-bottom: 24px;
+    }
+    &__title {
+      position: absolute;
+      top: 160px;
+      left: 100px;
+      width: 200px;
+      margin-bottom: 0;
+    }
+    &__image {
+    }
+
+    &__slides {
+      align-items: start;
+      flex-direction: row-reverse;
+    }
+    &__text-wrap {
+      display: flex;
+      flex-direction: column;
+      margin-right: 80px;
+      padding-top: 242px;
+    }
+  }
+  .swipe__title {
+    font-size: 64px;
+    width: 700px;
+    height: auto;
+
+    line-height: 1.03;
+    margin-bottom: 148px;
+  }
+  .swiper-but-next,
+  .swiper-but-prev {
+    cursor: pointer;
+  }
+
+  // SERVICES --desktop
+  .page-services {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 80px;
+    padding-right: 80px;
+    .swiper-wrapper {
+      justify-content: end;
+      gap: 20px;
+    }
+    .mySwiper3 {
+      display: none;
+    }
+    .mySwiper3__desktop {
+      display: flex;
+    }
+    &__title {
+      font-size: 12px;
+      font-weight: 400;
+    }
+    &__slide {
+      width: auto;
+    }
+    &__card-descriprion {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .custom-pagination-container {
+    margin-top: 40px;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: $button-accent;
+  }
+
+  // page-testimotials styles --desktop
+  .page-testimonials {
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 80px;
+    .mySwiper4 {
+      display: none;
+    }
+    .mySwiper4__desktop {
+      display: flex;
+    }
+    .swiper-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  // page-form styles --desktop
+  .form-group {
+    display: flex;
+    gap: 24px;
+  }
+
+  .form-group .page-form__select {
+    width: 100%;
+  }
+  #comment {
+    margin-bottom: 24px;
+  }
+  .page-form {
+    flex-direction: row;
+    padding-left: 298px;
+    padding-bottom: 80px;
+
+    &__pic-wrapper {
+      margin-right: 102px;
+      padding-top: 0;
+    }
+
+    &__fotter {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__button {
+      margin-left: 120px;
+    }
+    &__footer-wrap {
+      margin-bottom: 0;
+    }
+    &__footer-text {
+    }
+  }
+
+  // page-blog styles -desktop
+  .page-blog {
+    padding-bottom: 0;
+    &__wrap {
+      display: flex;
+    }
+
+    &__item {
+      width: 210px;
+      padding: 1px;
+    }
+    &__item img {
+      width: 210px;
+      height: 210px;
+    }
+
+    &__gallery {
+      width: 635px;
+      margin-right: 80px;
+    }
+
+    &__text-block {
+      flex-direction: row;
+    }
+
+    &__more {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      width: 651px;
+    }
+    &__more-title {
+      font-size: 60px;
+      text-align: end;
+    }
+    &__text-block {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__more-text {
+      width: 236px;
+    }
+    &__button {
+      margin: 0;
+    }
+    &__footer {
+      display: flex;
+      justify-content: end;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+
+  // footer styles --desktop
+  .page-footer {
+    padding-left: 80px;
+    padding-right: 80px;
+    &__copyrights {
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo,
+    &__line {
+      margin-right: 6px;
+    }
+
+    &__text {
+      display: block;
+    }
+
+    &__social {
+      display: flex;
+      align-items: center;
+      color: $button-accent;
+      gap: 24px;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
 }
